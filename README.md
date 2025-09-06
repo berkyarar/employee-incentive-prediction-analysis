@@ -28,7 +28,7 @@ It compares **Linear Regression** and **Polynomial Regression** models, includin
 ---
 
 ## 📂 Dataset
--  `3-customersatisfaction.csv`  
+  -  `3-customersatisfaction.csv`  
   - Feature: `Customer Satisfaction`  
   - Target: `Incentive` (bonus given to employees)  
 - **New data:** `3-newdatas.csv` (single column input for prediction)
