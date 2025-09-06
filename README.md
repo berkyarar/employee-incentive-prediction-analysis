@@ -1,36 +1,44 @@
-# Polynomial vs Linear Regression on Customer Satisfaction
+# Employee Incentive Regression Analysis
 
-This project compares **Linear Regression** and **Polynomial Regression** to predict `Incentive` from a single feature, `Customer Satisfaction`, using scaling, model training, evaluation, and visualization. It also includes a **Pipeline** to test multiple polynomial degrees.
+This project analyzes the relationship between **customer satisfaction** and **employee incentives (bonuses)**.  
+It compares **Linear Regression** and **Polynomial Regression** models, including preprocessing, model training, evaluation, and visualization. The workflow also demonstrates testing different polynomial degrees using a **Pipeline**.
 
 ---
 
 ## 📌 Features
-- Data loading & cleaning (`drop` unused column, null checks, describe/info)
-- **EDA:** scatter plot of `Customer Satisfaction` vs `Incentive`
-- **Preprocessing:** `StandardScaler` on X
-- **Models:**  
-  - Linear Regression (baseline)  
-  - Polynomial Regression (degree=2) with `PolynomialFeatures`
-- **Evaluation:** MAE, MSE, RMSE, R², Adjusted R² (test set)
-- **Visualization:** model fits and comparison plots
-- **Generalization:** predict on **new incoming data** (`3-newdatas.csv`) with the same scaler + polynomial transform
-- **Experimentation:** `Pipeline` to sweep polynomial **degrees 1–10** and print test R²
+- **Data Preparation**
+  - Load and clean dataset (`3-customersatisfaction.csv`)
+  - Drop unnecessary columns, check for missing values, descriptive statistics
+- **Exploratory Data Analysis (EDA)**
+  - Scatter plot of `Customer Satisfaction` vs `Incentive`
+- **Preprocessing**
+  - Feature scaling with `StandardScaler`
+- **Modeling**
+  - Linear Regression (baseline model)
+  - Polynomial Regression (degree=2) using `PolynomialFeatures`
+- **Evaluation**
+  - Metrics: MAE, MSE, RMSE, R², Adjusted R² (test set)
+- **Visualization**
+  - Compare linear vs polynomial fits on the same data
+- **Generalization**
+  - Predict incentives on new incoming data (`3-newdatas.csv`)  
+- **Experimentation**
+  - Pipeline implementation to test polynomial degrees 1–10 and compare R² scores
 
 ---
 
 ## 📂 Dataset
--  data: `3-customersatisfaction.csv`  
-  - Target: `Incentive`  
-  - Feature: `Customer Satisfaction`
-- New data for inference: `3-newdatas.csv` (single column input)
-
+-  `3-customersatisfaction.csv`  
+  - Feature: `Customer Satisfaction`  
+  - Target: `Incentive` (bonus given to employees)  
+- **New data:** `3-newdatas.csv` (single column input for prediction)
 
 ---
 
 ## 🛠 Tech Stack
-- Python, NumPy, pandas, matplotlib  
-- scikit-learn: `StandardScaler`, `LinearRegression`, `PolynomialFeatures`, `Pipeline`, metrics, `train_test_split`
+- Python  
+- NumPy, pandas, matplotlib  
+- scikit-learn: `StandardScaler`, `LinearRegression`, `PolynomialFeatures`, `Pipeline`, metrics,`train_test_split`
 
 ---
-
 
